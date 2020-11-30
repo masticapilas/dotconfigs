@@ -1,11 +1,26 @@
 # Based on https://github.com/w3cj/dotfiles
 
-HOST_NAME=emaniDev
+HOST_NAME=ManieDev
+
+# -------
+# Cmd
+# -------
+alias cmd='/mnt/c/Windows/System32/cmd.exe'
+alias git="cmd /c git"
+alias code="cmd /c code-insiders"
+alias node="cmd /c node"
+alias npm="cmd /c npm"
+alias explorer="cmd /c explorer"
+alias scoop="cmd /c scoop"
+alias nvim="cmd /c nvim"
+alias vim="nvim"
+alias neovim="nvim"
+alias vimqt="cmd /c nvim-qt"
+
 shopt -s autocd
 shopt -s histappend
 
-export PATH=$PATH:$HOME/bin:"/mnt/c/Program Files/Git/bin"
-
+export PATH=$PATH:$HOME/bin
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
@@ -18,19 +33,19 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
-txtorg='\e[0;33m' # Orange
 bldgrn='\e[1;32m' # Bold Green
 bldpur='\e[1;35m' # Bold Purple
 txtrst='\e[0m'    # Text Reset
 
-emojis=("🐐" "🐱‍👤" "🎲" "🍊" "🐉" "🌵" "🏴‍☠️")
+emojis=("👾" "🌐" "🎲" "🌍" "🐉" "🌵")
 
 EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
+
 print_before_the_prompt () {
     dir=$PWD
     home=$HOME
     dir=${dir/"$HOME"/"~"}
-    printf "\n $txtorg%s: $txtred%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
+    printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
@@ -44,10 +59,15 @@ function mkcd()
 	mkdir $1 && cd $1
 }
 
+
+
 # -------
 # Aliases
 # -------
-alias invm='source ~/.nvm/nvm.sh'
+alias maniedev="cd /mnt/c/Users/emaniega"
+alias 🍺="git checkout -b drunk"
+alias a='code .'
+alias c='code .'
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337"
 alias ns='npm start'
 alias start='npm start'
@@ -59,14 +79,8 @@ alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
 
 # ----------------------
-# Code
-# ----------------------
-alias cmd='/mnt/c/WINDOWS/system32/cmd.exe /C'
-alias code-insiders='/mnt/c/Users/{USER}/AppData/Local/Programs/"Microsoft VS Code Insiders/Code - Insiders.exe"'
-# ----------------------
 # Git Aliases
 # ----------------------
-alias git='git.exe'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add -A'
