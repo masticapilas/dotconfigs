@@ -1,0 +1,120 @@
+{
+    "window.zoomLevel": 0,
+    "extensions.ignoreRecommendations": false,
+    "editor.cursorStyle": "block-outline",
+    "editor.smoothScrolling": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.cursorBlinking": "phase",
+    "editor.mouseWheelZoom": true,
+    "workbench.editor.openPositioning": "last",
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": true,
+    "emmet.includeLanguages": {
+        "liquid": "html"
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
+    "gitlab.instanceUrl": "https://steps.everis.com/git/",
+    "gitlab.ignoreCertificateErrors": true,
+    "window.menuBarVisibility": "default",
+    "logViewer.watch": [
+
+    ],
+    "editor.largeFileOptimizations": false,
+    "git.autofetch": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Monokai",
+    "merge-n-paste.pathToMergeTool": "\"C:\\Program Files (x86)\\Meld\\Meld.exe\\\" %E %C",
+    "editor.multiCursorModifier": "alt",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "openapi.securityAuditToken": "CiBQm21KKv01GR+7SWY4gZB2u1QXP2/MJSxyRziaB2ZuzxIY2SnFwK+R/EeSSk8PghVgNffweZUoUCiyGnMffaEL5zz2OIKypoTXSjCFUvqIEo1jhmqwt+Wh6C+kJ/+SUxXBaS+WbU6BD2G2v79QgXALiYBlh3bhH3nz0TE/LZEU+uB3+NvedySukTr0w0Z40CA8q7D6DHTaisWRvbk8mToJ0q4vxR34MqeeAErJZDoy",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "push:menu"
+    ],
+    "sonarlint.connectedMode.project": {
+        //"serverId": "sonarqube6",
+        //"projectKey": ""
+/*         "serverId": "",
+        "projectKey": "" */
+        "connectionId": "",
+        "projectKey": ""
+    },
+    "sonarlint.connectedMode.connections.sonarqube": [{
+        "connectionId": "sonarqube6",
+        "serverUrl": "",
+        "token": ""
+    },
+    {
+        "connectionId": "exeSonarCode",
+        "serverUrl": "https://desarrollo.madrid.org/sonar",
+        "token": "9e4f503498e858a8bf248ee563b51d5cb7838b32"
+    },
+    {
+        "connectionId": "sonar-pro-md",
+        "serverUrl": "",
+        "token": ""
+    }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.startupEditor": "newUntitledFile",
+    "remote.SSH.remotePlatform": {
+        "": ""
+    },
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    
+    ],
+    "vim.normalModeKeyBindings": [
+
+
+        {
+            "before":["<C-Space>"],
+            "commands":[
+                "editor.action.revealDefinition",
+            ]
+        },
+        {
+            "before":["q","q"],
+            "commands":[
+                ":wq",
+            ]
+        },
+        {
+            "before": ["<C-Space>", "<Space>"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        }
+    ],
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-f": false,
+        "<C-d>": true
+    },
+    "vim.insertModeKeyBindings": [
+        {
+           "before": ["j", "j"],
+           "after": ["<Esc>"]
+        }
+    ],
+    "vim.overrideCopy": false,
+    "vim.easymotionIncSearchForegroundColor": "#7fbf00,",
+    "vim.statusBarColors.easymotionmode": ""
+}
