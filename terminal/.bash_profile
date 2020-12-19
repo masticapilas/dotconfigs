@@ -32,6 +32,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 txtred='\e[0;31m' # Red
+txtyellow='\e[1;33m' # Bold Yellow
 underLineYellow='\e[4;33m' # Yellow underlined
 bggrn='\e[42m' # Green
 bldgrn='\e[1;32m' # Bold Green
@@ -53,7 +54,7 @@ PROMPT_COMMAND=print_before_the_prompt
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 PS1="$EMOJI >"
 
-fortune | cowsay -f tux
+printf "$txtyellow%s$txtrst" "$(fortune | cowsay -f tux)" 
 
 function mkcd()
 {
