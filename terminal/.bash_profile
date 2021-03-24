@@ -12,15 +12,15 @@ alias node="cmd /c node"
 alias npm="cmd /c npm"
 alias explorer="cmd /c explorer"
 alias scoop="cmd /c scoop"
-alias nvim="cmd /c nvim"
+# alias nvim="cmd /c nvim"
 alias vim="nvim"
 alias neovim="nvim"
 alias vimqt="cmd /c nvim-qt"
-
+alias lite="cmd /c lite-server"
 shopt -s autocd
 shopt -s histappend
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:/mnt/c/Users/Emani/.bin
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
@@ -47,7 +47,7 @@ print_before_the_prompt () {
     dir=$PWD
     home=$HOME
     dir=${dir/"$HOME"/"~"}
-    printf "\n $underLineYellow%s:$txtrst $bldpur%s$txtrst $bggrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
+    printf "\n $underLineYellow%s:$txtrst $bldpur%s$txtrst $bggrn%s$txtrst \n" "$HOST_NAME" "$dir" "$(vcprompt)"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
@@ -66,7 +66,7 @@ function mkcd()
 # -------
 # Aliases
 # -------
-alias maniedev="cd /mnt/c/Users/emaniega"
+alias maniedev="cd /mnt/c/Users/Emani"
 alias 🍺="git checkout -b drunk"
 alias a='code .'
 alias c='code .'
@@ -95,3 +95,5 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+# source "$HOME/.cargo/env"
+maniedev
